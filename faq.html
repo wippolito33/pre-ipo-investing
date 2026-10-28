@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-IPO Investing FAQ: Common Questions Answered</title>
+<meta name="description" content="Plain-English answers to common questions about pre-IPO investing: how access works, accredited investor rules, minimums, lock-ups, fees, valuation, taxes, IRAs, and risks.">
+<link rel="canonical" href="https://pre-ipo-investing.netlify.app/faq.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f8f7;
+    --surface: #ffffff;
+    --surface-alt: #e6f2ee;
+    --surface-warn: #fbe9e7;
+    --text: #102a43;
+    --text-secondary: #52606d;
+    --accent: #12805c;
+    --accent-dark: #0d5c42;
+    --amber: #b7791f;
+    --border: #d9e2ec;
+    --danger: #c2362b;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    margin: 0;
+    color: var(--text);
+  }
+  a { color: var(--accent); }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  header.top {
+    padding: 28px 0 0 0;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--accent-dark);
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+  }
+  .eyebrow .dot {
+    width: 7px; height: 7px; border-radius: 999px; background: var(--accent);
+  }
+  .hero {
+    padding: 28px 0 40px 0;
+  }
+  .hero h1 {
+    font-size: 44px;
+    line-height: 1.15;
+    max-width: 14ch;
+  }
+  .hero p.lede {
+    margin-top: 18px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 56ch;
+  }
+  .hero-cta {
+    margin-top: 26px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 13px 26px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
+  section.card-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px;
+    margin: 20px 0;
+  }
+  section.card-section + section.card-section { margin-top: 20px; }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  .section-label .swatch {
+    width: 10px; height: 10px; border-radius: 3px;
+  }
+  .swatch.upside { background: var(--accent); }
+  .swatch.risk { background: var(--danger); }
+  .swatch.fit { background: var(--amber); }
+  h2.section-title {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .card-section p { font-size: 16px; line-height: 1.65; color: var(--text-secondary); margin: 0 0 12px 0; }
+  .card-section ul { margin: 14px 0 0 0; padding: 0; list-style: none; }
+  .card-section li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    padding: 9px 0;
+    border-top: 1px solid var(--border);
+  }
+  .card-section li:first-of-type { border-top: none; }
+  .card-section li svg { flex-shrink: 0; margin-top: 3px; }
+  .pill {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .pill.good { background: var(--surface-alt); color: var(--accent-dark); }
+  .pill.warn { background: var(--surface-warn); color: var(--danger); }
+
+  form.contact {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 6px;
+  }
+  input, textarea, select {
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 13px;
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%2352606d' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    padding-right: 36px;
+  }
+  select:invalid { color: var(--text-secondary); }
+  input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  textarea { resize: vertical; min-height: 96px; }
+  .form-foot {
+    margin-top: 4px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+  }
+  .thanks {
+    display: none;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 15px;
+    color: var(--accent-dark);
+    font-weight: 600;
+  }
+
+  footer {
+    margin: 36px 0 48px 0;
+  }
+  .disclaimer {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    margin-bottom: 26px;
+  }
+  .profile {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .profile img {
+    width: 64px; height: 64px; border-radius: 10px; object-fit: cover;
+    border: 1px solid var(--border);
+  }
+  .profile .name { font-weight: 700; font-size: 16px; }
+  .profile .role { font-size: 13.5px; color: var(--text-secondary); margin-top: 1px; }
+  .profile .meta { font-size: 13.5px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6; }
+  .profile .meta a { color: var(--text-secondary); text-decoration: none; }
+  .profile .meta a:hover { color: var(--accent); }
+
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 32px; }
+    .hero p.lede { font-size: 17px; }
+    section.card-section { padding: 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .profile { flex-direction: column; }
+  }
+
+  .toc ol { margin: 6px 0 0 0; padding-left: 20px; }
+  .toc li { display: list-item; border: none; padding: 4px 0; font-size: 15.5px; }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .faq-item h2.section-title { font-size: 25px; }
+  .back { font-size: 14px; font-weight: 600; text-decoration: none; }
+  .faq-cta { text-align: left; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is pre-IPO investing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pre-IPO investing means buying shares of a private company before it lists on a public stock exchange through an initial public offering (IPO). Instead of buying shares on the stock market, investors buy them privately, usually years before any public listing, if one ever happens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do individual investors get access to pre-IPO companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common routes are private placements (buying directly in a company's funding round), pooled vehicles such as special purpose vehicles (SPVs) and venture or growth funds that hold one or more private companies, and secondary transactions, where existing shareholders such as early employees or investors sell shares they already own. Each route has different paperwork, fees, minimums, and transfer restrictions, so it is worth understanding exactly what you would own before committing money."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be an accredited investor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, yes. Most pre-IPO offerings are made under SEC rules that limit participation to accredited investors. Under the SEC's definition, an individual generally qualifies with income over $200,000 (or $300,000 together with a spouse or spousal equivalent) in each of the last two years with the expectation of the same this year, or a net worth over $1 million alone or with a spouse, not counting a primary residence. Holding certain securities licenses in good standing (Series 7, 65, or 82) also qualifies. Some funds go further and require qualified purchasers, a higher standard that generally starts at $5 million in investments for an individual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much money does it take to invest in a pre-IPO company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimums vary widely. Pooled vehicles may accept commitments in the tens of thousands of dollars, while direct investments and institutional funds can require far more. Whatever the minimum, the more important question is how much you can afford to have tied up for years, or lose entirely, without affecting your financial plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is my money tied up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often several years, and there is no set schedule. Your money typically stays invested until the company goes public, is acquired, or you find a buyer on a secondary market, which may require company approval and may only be possible at a discount. You should plan as though you will not be able to access the money for a long time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to my shares when the company goes public?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your private shares generally become publicly tradable shares. However, existing shareholders are usually subject to a lock-up period after the IPO, commonly around 180 days, during which they cannot sell. The stock price can move significantly, up or down, during that time, so the value at the IPO is not necessarily what you will be able to sell for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the company never goes public?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many private companies never IPO. A company may be acquired, which can return more or less than you invested; it may stay private indefinitely; or it may fail, in which case you can lose your entire investment. An IPO is one possible outcome, not a promise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What fees are involved in pre-IPO investing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fees depend on the structure. Funds and SPVs commonly charge a management fee and a share of profits known as carried interest, and some add upfront placement or administrative fees. Layered fees can meaningfully reduce your net return, so ask for a full breakdown of every fee before you invest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are pre-IPO shares valued?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Private companies do not have a daily market price. Values usually come from the most recent funding round, which often prices preferred stock with special rights, or from secondary market trades, which can be at a discount or a premium to that round. Common stock and preferred stock in the same company can be worth very different amounts, and a later funding round at a lower price (a down round) can reduce the value of earlier shares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I invest in pre-IPO companies through an IRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can be possible through a self-directed IRA with a custodian that holds private investments. These accounts have strict rules against prohibited transactions, and some investment structures can create taxable income inside the IRA. Because mistakes can be costly, review the arrangement with a tax professional before using retirement money."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are pre-IPO investments taxed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gains are generally taxed as capital gains when you sell, with long-term rates applying if you held the investment for more than one year. Fund and SPV investors often receive a Schedule K-1 rather than a 1099, and K-1s can arrive late in tax season. Special rules, such as the qualified small business stock exclusion, apply only in specific situations and often do not apply to shares bought secondhand. A tax advisor can explain how these rules apply to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of my portfolio should go into pre-IPO investments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no single right answer, but pre-IPO investments are generally treated as a small, higher-risk slice of an already diversified portfolio rather than a core holding. The right amount depends on your goals, time horizon, liquidity needs, and ability to absorb a total loss, which is why it helps to talk it through with a financial professional."
+      }
+    }
+  ]
+}
+</script>
+<!-- Meta Pixel Code -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1787912672484805');
+fbq('track', 'PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1787912672484805&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a href="index.html" class="back">&larr; Is pre-IPO investing right for you?</a>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow"><span class="dot"></span>Educational — not an offer to buy or sell any security</span>
+    <h1 style="margin-top:20px;">Pre-IPO investing: common questions</h1>
+    <p class="lede">Straight answers to the questions people ask most about investing in private companies before they go public, including the parts that rarely make the headlines.</p>
+  </section>
+
+  <section class="card-section toc">
+    <div class="section-label"><span class="swatch upside"></span>On this page</div>
+    <ol>
+      <li><a href="#q1">What is pre-IPO investing?</a></li>
+      <li><a href="#q2">How do individual investors get access to pre-IPO companies?</a></li>
+      <li><a href="#q3">Do I need to be an accredited investor?</a></li>
+      <li><a href="#q4">How much money does it take to invest in a pre-IPO company?</a></li>
+      <li><a href="#q5">How long is my money tied up?</a></li>
+      <li><a href="#q6">What happens to my shares when the company goes public?</a></li>
+      <li><a href="#q7">What if the company never goes public?</a></li>
+      <li><a href="#q8">What fees are involved in pre-IPO investing?</a></li>
+      <li><a href="#q9">How are pre-IPO shares valued?</a></li>
+      <li><a href="#q10">Can I invest in pre-IPO companies through an IRA?</a></li>
+      <li><a href="#q11">How are pre-IPO investments taxed?</a></li>
+      <li><a href="#q12">How much of my portfolio should go into pre-IPO investments?</a></li>
+    </ol>
+  </section>
+
+  <section class="card-section faq-item" id="q1">
+    <h2 class="section-title">What is pre-IPO investing?</h2>
+      <p>Pre-IPO investing means buying shares of a private company before it lists on a public stock exchange through an initial public offering (IPO). Instead of buying shares on the stock market, investors buy them privately, usually years before any public listing, if one ever happens.</p>
+  </section>
+  <section class="card-section faq-item" id="q2">
+    <h2 class="section-title">How do individual investors get access to pre-IPO companies?</h2>
+      <p>The most common routes are private placements (buying directly in a company&#x27;s funding round), pooled vehicles such as special purpose vehicles (SPVs) and venture or growth funds that hold one or more private companies, and secondary transactions, where existing shareholders such as early employees or investors sell shares they already own.</p>
+      <p>Each route has different paperwork, fees, minimums, and transfer restrictions, so it is worth understanding exactly what you would own before committing money.</p>
+  </section>
+  <section class="card-section faq-item" id="q3">
+    <h2 class="section-title">Do I need to be an accredited investor?</h2>
+      <p>In most cases, yes. Most pre-IPO offerings are made under SEC rules that limit participation to accredited investors. Under the SEC&#x27;s definition, an individual generally qualifies with income over $200,000 (or $300,000 together with a spouse or spousal equivalent) in each of the last two years with the expectation of the same this year, or a net worth over $1 million alone or with a spouse, not counting a primary residence. Holding certain securities licenses in good standing (Series 7, 65, or 82) also qualifies.</p>
+      <p>Some funds go further and require qualified purchasers, a higher standard that generally starts at $5 million in investments for an individual.</p>
+  </section>
+  <section class="card-section faq-item" id="q4">
+    <h2 class="section-title">How much money does it take to invest in a pre-IPO company?</h2>
+      <p>Minimums vary widely. Pooled vehicles may accept commitments in the tens of thousands of dollars, while direct investments and institutional funds can require far more. Whatever the minimum, the more important question is how much you can afford to have tied up for years, or lose entirely, without affecting your financial plan.</p>
+  </section>
+  <section class="card-section faq-item" id="q5">
+    <h2 class="section-title">How long is my money tied up?</h2>
+      <p>Often several years, and there is no set schedule. Your money typically stays invested until the company goes public, is acquired, or you find a buyer on a secondary market, which may require company approval and may only be possible at a discount. You should plan as though you will not be able to access the money for a long time.</p>
+  </section>
+  <section class="card-section faq-item" id="q6">
+    <h2 class="section-title">What happens to my shares when the company goes public?</h2>
+      <p>Your private shares generally become publicly tradable shares. However, existing shareholders are usually subject to a lock-up period after the IPO, commonly around 180 days, during which they cannot sell. The stock price can move significantly, up or down, during that time, so the value at the IPO is not necessarily what you will be able to sell for.</p>
+  </section>
+  <section class="card-section faq-item" id="q7">
+    <h2 class="section-title">What if the company never goes public?</h2>
+      <p>Many private companies never IPO. A company may be acquired, which can return more or less than you invested; it may stay private indefinitely; or it may fail, in which case you can lose your entire investment. An IPO is one possible outcome, not a promise.</p>
+  </section>
+  <section class="card-section faq-item" id="q8">
+    <h2 class="section-title">What fees are involved in pre-IPO investing?</h2>
+      <p>Fees depend on the structure. Funds and SPVs commonly charge a management fee and a share of profits known as carried interest, and some add upfront placement or administrative fees. Layered fees can meaningfully reduce your net return, so ask for a full breakdown of every fee before you invest.</p>
+  </section>
+  <section class="card-section faq-item" id="q9">
+    <h2 class="section-title">How are pre-IPO shares valued?</h2>
+      <p>Private companies do not have a daily market price. Values usually come from the most recent funding round, which often prices preferred stock with special rights, or from secondary market trades, which can be at a discount or a premium to that round. Common stock and preferred stock in the same company can be worth very different amounts, and a later funding round at a lower price (a down round) can reduce the value of earlier shares.</p>
+  </section>
+  <section class="card-section faq-item" id="q10">
+    <h2 class="section-title">Can I invest in pre-IPO companies through an IRA?</h2>
+      <p>It can be possible through a self-directed IRA with a custodian that holds private investments. These accounts have strict rules against prohibited transactions, and some investment structures can create taxable income inside the IRA. Because mistakes can be costly, review the arrangement with a tax professional before using retirement money.</p>
+  </section>
+  <section class="card-section faq-item" id="q11">
+    <h2 class="section-title">How are pre-IPO investments taxed?</h2>
+      <p>Gains are generally taxed as capital gains when you sell, with long-term rates applying if you held the investment for more than one year. Fund and SPV investors often receive a Schedule K-1 rather than a 1099, and K-1s can arrive late in tax season. Special rules, such as the qualified small business stock exclusion, apply only in specific situations and often do not apply to shares bought secondhand. A tax advisor can explain how these rules apply to you.</p>
+  </section>
+  <section class="card-section faq-item" id="q12">
+    <h2 class="section-title">How much of my portfolio should go into pre-IPO investments?</h2>
+      <p>There is no single right answer, but pre-IPO investments are generally treated as a small, higher-risk slice of an already diversified portfolio rather than a core holding. The right amount depends on your goals, time horizon, liquidity needs, and ability to absorb a total loss, which is why it helps to talk it through with a financial professional.</p>
+  </section>
+
+  <section class="card-section faq-cta">
+    <div class="section-label"><span class="swatch fit"></span>Still have questions?</div>
+    <h2 class="section-title">Talk it through, no obligation</h2>
+    <p>If you are wondering whether pre-IPO investing fits your situation, send a question and I'll follow up.</p>
+    <div class="hero-cta"><a href="index.html#contact" class="btn btn-primary">Ask a question</a></div>
+  </section>
+
+  <footer>
+    <div class="disclaimer">
+      This page is for educational purposes only and does not constitute investment, legal, or tax advice, or an offer or solicitation to buy or sell any security. Pre-IPO investments are speculative, illiquid, and generally suitable only for accredited or qualified investors who can bear the loss of their entire investment. Past performance of any investment is not indicative of future results. Securities, when offered, are offered only pursuant to definitive offering documents, which should be read carefully before investing.
+    </div>
+    <div class="profile">
+      <img src="https://alexandercapitalvm.com/wp-content/uploads/bill-ippolito-headshot.jpg" alt="Bill Ippolito" onerror="this.style.display='none'">
+      <div>
+        <div class="name">Bill Ippolito</div>
+        <div class="role">Financial Advisor, Alexander Capital, L.P.</div>
+        <div class="meta">
+          (732) 784-5789<br>
+          <a href="mailto:bippolito@alexandercapitallp.com">bippolito@alexandercapitallp.com</a><br>
+          <a href="https://alexandercapitalvm.com" target="_blank" rel="noopener">alexandercapitalvm.com</a><br>
+          10 Drs James Parker Blvd, Ste 202, Red Bank, NJ 07701<br>
+          Member FINRA/MSRB/SIPC
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

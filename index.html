@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is Pre-IPO Investing Right for You?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f8f7;
+    --surface: #ffffff;
+    --surface-alt: #e6f2ee;
+    --surface-warn: #fbe9e7;
+    --text: #102a43;
+    --text-secondary: #52606d;
+    --accent: #12805c;
+    --accent-dark: #0d5c42;
+    --amber: #b7791f;
+    --border: #d9e2ec;
+    --danger: #c2362b;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    margin: 0;
+    color: var(--text);
+  }
+  a { color: var(--accent); }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  header.top {
+    padding: 28px 0 0 0;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--accent-dark);
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+  }
+  .eyebrow .dot {
+    width: 7px; height: 7px; border-radius: 999px; background: var(--accent);
+  }
+  .hero {
+    padding: 28px 0 40px 0;
+  }
+  .hero h1 {
+    font-size: 44px;
+    line-height: 1.15;
+    max-width: 14ch;
+  }
+  .hero p.lede {
+    margin-top: 18px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 56ch;
+  }
+  .hero-cta {
+    margin-top: 26px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 13px 26px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
+  section.card-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px;
+    margin: 20px 0;
+  }
+  section.card-section + section.card-section { margin-top: 20px; }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  .section-label .swatch {
+    width: 10px; height: 10px; border-radius: 3px;
+  }
+  .swatch.upside { background: var(--accent); }
+  .swatch.risk { background: var(--danger); }
+  .swatch.fit { background: var(--amber); }
+  h2.section-title {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .card-section p { font-size: 16px; line-height: 1.65; color: var(--text-secondary); margin: 0 0 12px 0; }
+  .card-section ul { margin: 14px 0 0 0; padding: 0; list-style: none; }
+  .card-section li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    padding: 9px 0;
+    border-top: 1px solid var(--border);
+  }
+  .card-section li:first-of-type { border-top: none; }
+  .card-section li svg { flex-shrink: 0; margin-top: 3px; }
+  .pill {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .pill.good { background: var(--surface-alt); color: var(--accent-dark); }
+  .pill.warn { background: var(--surface-warn); color: var(--danger); }
+
+  form.contact {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 6px;
+  }
+  input, textarea, select {
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 13px;
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%2352606d' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    padding-right: 36px;
+  }
+  select:invalid { color: var(--text-secondary); }
+  input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  textarea { resize: vertical; min-height: 96px; }
+  .form-foot {
+    margin-top: 4px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+  }
+  .thanks {
+    display: none;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 15px;
+    color: var(--accent-dark);
+    font-weight: 600;
+  }
+
+  footer {
+    margin: 36px 0 48px 0;
+  }
+  .disclaimer {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    margin-bottom: 26px;
+  }
+  .profile {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .profile img {
+    width: 64px; height: 64px; border-radius: 10px; object-fit: cover;
+    border: 1px solid var(--border);
+  }
+  .profile .name { font-weight: 700; font-size: 16px; }
+  .profile .role { font-size: 13.5px; color: var(--text-secondary); margin-top: 1px; }
+  .profile .meta { font-size: 13.5px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6; }
+  .profile .meta a { color: var(--text-secondary); text-decoration: none; }
+  .profile .meta a:hover { color: var(--accent); }
+
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 32px; }
+    .hero p.lede { font-size: 17px; }
+    section.card-section { padding: 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .profile { flex-direction: column; }
+  }
+</style>
+<!-- Meta Pixel Code -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1787912672484805');
+fbq('track', 'PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1787912672484805&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow"><span class="dot"></span>Educational — not an offer to buy or sell any security</span>
+  </header>
+
+  <section class="hero">
+    <h1>Is pre-IPO investing right for you?</h1>
+    <p class="lede">Before a company goes public, early investors sometimes get access — but it isn't for everyone. Here's a clear-eyed look at the upside, the risks, and who this kind of investing actually suits, before you consider it.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">
+        Ask a question
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#risks" class="btn btn-ghost">See the risks first</a>
+      <a href="faq.html" class="btn btn-ghost">Common questions</a>
+    </div>
+  </section>
+
+  <section class="card-section" id="upside">
+    <div class="section-label"><span class="swatch upside"></span>The opportunity</div>
+    <h2 class="section-title">Getting in before the public market does</h2>
+    <p>Pre-IPO investing means buying a stake in a private company before it lists on a public exchange — often through a private placement, a fund, or a secondary sale of existing shares.</p>
+    <ul>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#12805c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Potential access to growth that may already be mostly priced in by the time a company reaches the public market</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#12805c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A way to diversify beyond publicly traded stocks and bonds</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#12805c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Exposure to companies at an earlier, potentially higher-growth stage</li>
+    </ul>
+  </section>
+
+  <section class="card-section" id="risks">
+    <div class="section-label"><span class="swatch risk"></span>The risks</div>
+    <h2 class="section-title">What most people don't hear about</h2>
+    <p>The upside gets most of the attention. The risks are just as real, and worth understanding before anything else.</p>
+    <ul>
+      <li><span class="pill warn">Illiquid</span>Shares typically can't be sold on the open market — your money may be tied up for years with no guaranteed exit</li>
+      <li><span class="pill warn">Limited data</span>Private companies disclose far less than public ones, so due diligence is harder and information gaps are common</li>
+      <li><span class="pill warn">Higher minimums</span>Investments are often structured for accredited or qualified investors, with investment minimums to match</li>
+      <li><span class="pill warn">No guarantee</span>Not every private company goes public, or succeeds — some investments return nothing</li>
+    </ul>
+  </section>
+
+  <section class="card-section" id="fit">
+    <div class="section-label"><span class="swatch fit"></span>Who this suits</div>
+    <h2 class="section-title">Is this the right fit for your portfolio?</h2>
+    <p>Pre-IPO investing tends to make the most sense for investors who meet a specific profile — not as a replacement for a core portfolio, but as a smaller, considered allocation alongside one.</p>
+    <ul>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#b7791f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Accredited or qualified investors, as defined by SEC rules</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#b7791f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A longer time horizon, since an exit isn't guaranteed on any set schedule</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#b7791f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Comfort allocating a smaller slice of a diversified portfolio to a higher-risk, illiquid position</li>
+    </ul>
+  </section>
+
+  <section class="card-section" id="contact">
+    <div class="section-label"><span class="swatch upside"></span>Next step</div>
+    <h2 class="section-title">Want to talk through whether it fits?</h2>
+    <p>Send a few details and I'll follow up — no obligation, just a conversation about whether this fits your situation.</p>
+
+    <form class="contact" name="pre-ipo-interest" method="POST" data-netlify="true" netlify-honeypot="company" id="contactForm">
+      <input type="hidden" name="form-name" value="pre-ipo-interest">
+      <p style="display:none">
+        <label>Don't fill this out: <input name="company"></label>
+      </p>
+      <div class="form-row">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(732) 555-1234" pattern="\(\d{3}\) \d{3}-\d{4}" inputmode="tel" title="Format: (732) 555-1234">
+        </div>
+        <div>
+          <label for="accredited">Are you an accredited investor?</label>
+          <select id="accredited" name="accredited" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Not sure">Not sure</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="message">What would you like to know?</label>
+        <textarea id="message" name="message" placeholder="Optional — share anything you'd like me to know before we talk."></textarea>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+      <div class="form-foot">By submitting, you're asking to be contacted about this topic. This is not an offer or solicitation of any specific security. This site uses the Meta Pixel to measure ad performance.</div>
+    </form>
+    <div class="thanks" id="thanksMsg">Thanks — your message is on its way. I'll be in touch soon.</div>
+  </section>
+
+  <footer>
+    <p style="font-size:14px;margin:0 0 18px 0;"><a href="faq.html">Pre-IPO investing: common questions answered &rarr;</a></p>
+    <div class="disclaimer">
+      This page is for educational purposes only and does not constitute investment, legal, or tax advice, or an offer or solicitation to buy or sell any security. Pre-IPO investments are speculative, illiquid, and generally suitable only for accredited or qualified investors who can bear the loss of their entire investment. Past performance of any investment is not indicative of future results. Securities, when offered, are offered only pursuant to definitive offering documents, which should be read carefully before investing.
+    </div>
+    <div class="profile">
+      <img src="https://alexandercapitalvm.com/wp-content/uploads/bill-ippolito-headshot.jpg" alt="Bill Ippolito" onerror="this.style.display='none'">
+      <div>
+        <div class="name">Bill Ippolito</div>
+        <div class="role">Financial Advisor, Alexander Capital, L.P.</div>
+        <div class="meta">
+          (732) 784-5789<br>
+          <a href="mailto:bippolito@alexandercapitallp.com">bippolito@alexandercapitallp.com</a><br>
+          <a href="https://alexandercapitalvm.com" target="_blank" rel="noopener">alexandercapitalvm.com</a><br>
+          10 Drs James Parker Blvd, Ste 202, Red Bank, NJ 07701<br>
+          Member FINRA/MSRB/SIPC
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var phone = document.getElementById('phone');
+    phone.addEventListener('input', function () {
+      var digits = phone.value.replace(/\D/g, '').slice(0, 10);
+      var formatted = digits;
+      if (digits.length > 6) {
+        formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6);
+      } else if (digits.length > 3) {
+        formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
+      } else if (digits.length > 0) {
+        formatted = '(' + digits;
+      }
+      phone.value = formatted;
+    });
+  })();
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    // On Netlify this submits natively to Netlify Forms (data-netlify="true").
+    // This only intercepts the UI state; it does not block the real submission
+    // when the page is deployed on Netlify.
+    var form = e.target;
+    var data = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    }).catch(function () {});
+    if (window.fbq) { fbq('track', 'Lead'); }
+    e.preventDefault();
+    form.style.display = 'none';
+    document.getElementById('thanksMsg').style.display = 'block';
+  });
+</script>
+</body>
+</html>
